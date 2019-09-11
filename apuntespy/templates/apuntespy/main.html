@@ -1,0 +1,56 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'apuntespy/apuntespy.css' %}">
+<style>
+div{
+  text-align: right;
+  vertical-align: middle;
+}
+td{
+    padding: 2px;
+    margin: 2px;
+
+}
+input, select, textarea{
+    border-radius: 4px;
+}
+
+.boton{
+    background-clip: border-box;
+    background: #7ee383;
+    border: 2px solid #7ee383;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+</style>
+<h1 class="titulo">Nuevo TIP</h1>
+<div>
+    <div>
+       <!-- <form>
+            <span class="form-title">Nuevo Tip</span>
+            <div><input class="input100" id="name" type="text" name="name" placeholder="Name"></div>
+
+        </form> --->
+        <form method="post">
+            {% csrf_token %}
+            <table align="center">
+            {{ form.as_table }}
+                <td></td>
+                <td><div><input class="boton" type="submit" value="Crear Categoria" />
+                    <input class="boton" type="submit" value="Crear Tip" />
+                </div></td>
+            </table>
+
+
+        </form>
+    </div>
+</div>

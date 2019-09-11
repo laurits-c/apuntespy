@@ -1,0 +1,103 @@
+/*
+//////////////////////////////////////////////////////
+
+FREE HTML5 TEMPLATE 
+DESIGNED & DEVELOPED by FREEHTML5.CO
+
+//////////////////////////////////////////////////////
+
+*/
+
+body {
+    padding-left: 100px;
+    padding-right:100px;
+
+}
+th{
+     text-align:right;
+}
+h1 a {
+    color: #FCA205;
+}
+
+nav {
+    float: right; /* Desplazamos el nav hacia la derecha */
+}
+ nav ul {
+    float: right;
+    margin: 0 15px 0 0;
+    list-style: none;
+    overflow: hidden
+ }
+ nav ul li{
+    float: right;
+ }
+ nav ul li:hover {
+  background: #3ead47;
+}
+nav ul li a{
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+input, select, textarea{
+    border-radius: 4px;
+}
+
+.boton{
+    background-clip: border-box;
+    background: #7ee383;
+    border: 2px solid #7ee383;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+.titulo{
+	font-family: "Unica One", sans-serif;
+	border-bottom: 2px solid #2e2e2e;
+	border-bottom-color: rgba(126, 227, 131, 0.984);
+	font-size: 30px;
+	line-height: 40px;
+}
+.subtitulo{
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align:top;
+    text-align:right
+}
+.texto{
+    padding-left: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+}
+.tag{
+    background-clip: border-box;
+    background: #7ee383;
+    border: 2px solid #7ee383;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    white-space: normal;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+/*# sourceMappingURL=style.css.map */

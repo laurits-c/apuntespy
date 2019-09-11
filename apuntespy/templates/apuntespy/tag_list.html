@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'apuntespy/apuntespy.css' %}">
+
+{% if tags %}
+<h1 class="titulo">Categorias (Tags) </h1>
+    <ul>
+    {% for tag in tags %}
+        <li><a href="{% url 'apuntespy:detail' tag.id %}">{{ tag.tag_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tags are available.</p>
+{% endif %}
+<div>
+    <nav>
+        <ul id="submenu">
+            <li><a class="boton" href="{% url 'apuntespy:new-tag' %}">Nueva Categoria</a></li>
+            <li> <a class="boton" href="{% url 'apuntespy:new' %}">Nuevo Tip</a></li>
+        </ul>
+    </nav>
+</div>
+

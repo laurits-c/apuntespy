@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'apuntespy/apuntespy.css' %}">
+<h1 class="titulo">{{ tip }}</h1>
+
+<table>
+   <tr>
+       <td class="subtitulo">Descripción: </td>
+       <td class="texto">{{ tip.tip_descripcion|linebreaks }}</td>
+
+   </tr>
+    <tr>
+        <td class="subtitulo">Ejemplo: </td>
+       <td class="texto">{{ tip.tip_ejemplo|linebreaks }}</td>
+    </tr>
+   <tr>
+       <td class="subtitulo">Tags: </td>
+       {% for tag in tip.tags.all %}
+            <td class="texto"><a href="{% url 'apuntespy:detail' tag.id %}">{{ tag }}</a></td>
+        {% endfor %}
+
+   </tr>
+</table>
+            <nav>
+                <ul id="submenu">
+                    <li> <a href="{% url 'apuntespy:tag_list' %}" class="boton" >Menú</a></li>
+                </ul>
+            </nav>

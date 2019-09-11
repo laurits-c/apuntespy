@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'apuntespy/apuntespy.css' %}">
+
+<h1 class="titulo">Nuevo TIP</h1>
+<div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <table align="center">
+            {{ form.as_table }}
+                <td></td>
+                <td><div align="right"><input class="boton" type="submit" value="Crear Tip" />
+                </div></td>
+
+            </table>
+
+
+        </form>
+            <nav>
+                <ul id="submenu">
+                    <li><a href="{% url 'apuntespy:new-tag' %}" class="boton" >Crear Tag</a></li>
+                    <li> <a href="{% url 'apuntespy:tag_list' %}" class="boton" >Menú</a></li>
+                </ul>
+            </nav>
+    </div>
+</div>

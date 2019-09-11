@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'apuntespy/apuntespy.css' %}">
+<h1 class="titulo">{{ tip }}</h1>
+<div>
+    <div>
+       <!-- <form>
+            <span class="form-title">Nuevo Tip</span>
+            <div><input class="input100" id="name" type="text" name="name" placeholder="Name"></div>
+
+        </form> --->
+        <form method="post">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+             <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
